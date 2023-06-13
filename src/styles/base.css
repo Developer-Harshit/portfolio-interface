@@ -17,6 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 div,
 li,
 ol,
@@ -31,7 +32,10 @@ p {
   padding: 0px;
   margin: 0px;
 }
-
+header {
+  position: sticky;
+  top: 0;
+}
 a {
   font-weight: 500;
   color: #646cff;

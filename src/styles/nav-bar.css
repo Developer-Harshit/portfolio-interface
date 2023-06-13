@@ -1,43 +1,45 @@
 @import "./package/ham.css";
 
-#nav-wrapper {
-	background-color: blueviolet;
-	padding: 15px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	justify-items: start;
-}
-#logo-list {
-	justify-self: center;
-}
-aside {
-	width: 100%;
-	position: fixed;
-	height: 100%;
-	background-color: #00000000;
-	/* display: none; */
+#header-wrapper {
+  background-color: blueviolet;
+  height: 7svh;
+  padding: 15px;
+  display: flex;
+  justify-items: start;
+  position: sticky;
+  z-index: 5;
+  width: 100%;
+
+  justify-content: space-between;
 }
 
+/* backdrop */
+aside {
+  transform: translateY(-7svh);
+  position: sticky;
+  z-index: 4;
+  transition: all ease-in 0.5s;
+}
+.is-active {
+  transform: translateY(0);
+}
 nav {
-	background-color: #010204e8;
-	position: fixed;
-	width: 30%;
-	height: 100%;
-	left: -30%;
-	transition: all ease-in 1s;
+  min-height: 1rem;
+  transition: all ease-in 0.5s;
 }
 .is-active nav {
-	left: 0;
+  top: 7svh;
 }
 nav ol {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	flex-direction: column;
-	align-content: flex-start;
-	align-items: flex-start;
-	padding-left: 15px;
+  padding: 0.5rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-direction: row;
+
+  padding-left: 15px;
+  background-color: rgba(0, 0, 0, 0.233);
 }
-nav ol li {
-	margin-right: 5px;
+.nav-list {
+  margin-right: 5px;
 }
