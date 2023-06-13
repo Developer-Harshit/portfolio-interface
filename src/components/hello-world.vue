@@ -1,6 +1,6 @@
 <script>
 export default {
-	name: "HelloWorld",
+	name: "hello-world",
 	props: ["msg"],
 	data() {
 		return {

@@ -1,0 +1,43 @@
+@import "./package/ham.css";
+
+#nav-wrapper {
+	background-color: blueviolet;
+	padding: 15px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: start;
+}
+#logo-list {
+	justify-self: center;
+}
+aside {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	background-color: #00000000;
+	/* display: none; */
+}
+
+nav {
+	background-color: #010204e8;
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	left: -30%;
+	transition: all ease-in 1s;
+}
+.is-active nav {
+	left: 0;
+}
+nav ol {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: column;
+	align-content: flex-start;
+	align-items: flex-start;
+	padding-left: 15px;
+}
+nav ol li {
+	margin-right: 5px;
+}
