@@ -8,17 +8,7 @@ import ProgressBar from "./components/progress-bar.vue";
 export default {
   components: { HelloWorld, NavBar, HeroSection, AboutDiv, ProgressBar },
   data() {
-    return {
-      sketch: false,
-      hello: "world",
-
-      aboutTitle: `Hi 
-I'm a Web Developer`,
-      aboutText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, optio modi! Reiciendis perspiciatis fugiat exercitationem porro dicta quis, a dolores dolorum illo accusamus eveniet magni molestias eos ratione, repudiandae quisquam non ipsum dolore corporis animi pariatur distinctio amet. Veritatis tempora doloribus possimus necessitatibus! Minima provident, sunt recusandae sit soluta molestiae repellat placeat dicta consequatur eos nihil earum amet tenetur atque nemo nobis similique cumque possimus odio animi sed tempore sequi rerum! Aliquid optio obcaecati totam. Consequatur inventore autem voluptatum totam accusantium vitae quidem? Doloribus excepturi explicabo nostrum laboriosam aliquid reiciendis magni consectetur, amet quaerat nesciunt enim voluptates, vitae cumque culpa. Est aliquid illum eos, ratione, nostrum consectetur modi dolores explicabo similique obcaecati quaerat laudantium tenetur. Enim maxime expedita delectus quos.
-`,
-      titlePointer: false,
-      pointer: false,
-    };
+    return {};
   },
 };
 </script>
@@ -31,12 +21,7 @@ I'm a Web Developer`,
   <main>
     <hero-section>
       <template #hero-slot>
-        <about-div
-          :about-title="aboutTitle"
-          :about-text="aboutText"
-          :title-pointer="titlePointer"
-          :pointer="pointer"
-        ></about-div>
+        <about-div></about-div>
       </template>
     </hero-section>
     <div>

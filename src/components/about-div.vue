@@ -1,28 +1,19 @@
 <template>
   <div id="aboutme">
-    <h2>
-      {{ aboutTitle }} <span v-if="titlePointer" class="typeSpan">|</span>
-    </h2>
-    <p class="typePara">
-      {{ aboutText }} <span v-if="pointer" class="typeSpan">|</span>
-    </p>
+    <typeWriter :text="title" should-start="true" speed="7"></typeWriter>
+    <typeWriter :text="desc" should-start="true" speed="3"></typeWriter>
   </div>
 </template>
 <script>
+import typeWriter from "./type-writer.vue";
 export default {
-  name: "about-div",
-  props: ["aboutText", "pointer", "aboutTitle", "titlePointer"],
-  data: function () {
-    return {};
+  data() {
+    return {
+      title: "helo Im a web developer",
+      desc: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore possimus asperiores, vitae numquam porro iste magnam repellat voluptatum ducimus, sit fuga sint fugiat soluta deserunt officiis alias ipsa dolores enim dolor? Dolorum distinctio, vel est laboriosam beatae harum, adipisci quo totam iusto provident corporis. Facilis nihil dolore blanditiis. Laborum repellendus, labore nam eum harum, deserunt maxime incidunt sed similique minus sint nostrum reprehenderit officia corporis earum rem esse, accusantium et facilis recusandae? Aut reiciendis doloremque amet iusto voluptatum impedit laboriosam.`,
+    };
   },
-
-  methods: {
-    changeVars(pointer, textData) {
-      console.log(this.text);
-      this.pointer = pointer;
-      this.text = textData;
-    },
-  },
+  components: { typeWriter },
 };
 </script>
 <style scoped>

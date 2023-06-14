@@ -4,5 +4,10 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  background-color: rgb(29, 171, 25);
+  background: rgb(39, 55, 144);
+  background: linear-gradient(
+    74deg,
+    rgba(39, 55, 144, 1) 0%,
+    rgba(198, 20, 192, 1) 100%
+  );
 }
