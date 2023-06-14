@@ -4,9 +4,9 @@ import HeroSection from "./components/hero-section.vue";
 
 import AboutDiv from "./components/about-div.vue";
 import NavBar from "./components/nav-bar.vue";
-import { setDim, handleScroll } from "./scripts/progress-util";
+import ProgressBar from "./components/progress-bar.vue";
 export default {
-  components: { HelloWorld, NavBar, HeroSection, AboutDiv },
+  components: { HelloWorld, NavBar, HeroSection, AboutDiv, ProgressBar },
   data() {
     return {
       sketch: false,
@@ -23,32 +23,11 @@ I'm a Web Developer`,
       pointer: false,
     };
   },
-  created() {
-    window.addEventListener("resize", this.setDim);
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  mounted() {
-    this.setDim();
-    this.handleScroll();
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.setDim);
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    setDim(e) {
-      setDim(this);
-      // your code for handling resize...
-    },
-    handleScroll(e) {
-      handleScroll(this);
-    },
-  },
 };
 </script>
 
 <template>
-  <div id="progress-bar"></div>
+  <progress-bar></progress-bar>
   <header>
     <nav-bar></nav-bar>
   </header>

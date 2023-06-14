@@ -15,9 +15,7 @@ export default {
   data: function () {
     return {};
   },
-  mounted() {
-    console.log("component connected");
-  },
+
   methods: {
     changeVars(pointer, textData) {
       console.log(this.text);

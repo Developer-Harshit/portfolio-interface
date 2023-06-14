@@ -3,8 +3,7 @@ import "./styles/base.css";
 import "./styles/essentials.css";
 import "./styles/package/ham.css";
 import App from "./App.vue";
-import AboutDiv from "./components/about-div.vue";
+
 const app = createApp(App);
-app.component("about-div", AboutDiv);
 app.mount("#app");
 export default app;
