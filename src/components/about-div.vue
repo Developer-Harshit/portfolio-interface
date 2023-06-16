@@ -1,11 +1,11 @@
 <template>
   <div id="aboutme">
-    <typeWriter :text="title" should-start="true" speed="7"></typeWriter>
-    <typeWriter :text="desc" should-start="true" speed="3"></typeWriter>
+    <typeWriter :text="title" should-start="true" write-speed="7"></typeWriter>
+    <typeWriter :text="desc" should-start="true" write-speed="3"></typeWriter>
   </div>
 </template>
 <script>
-import typeWriter from "./type-writer.vue";
+import typeWriter from "./Sketch/type-writer.vue";
 export default {
   data() {
     return {

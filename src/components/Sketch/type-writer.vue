@@ -1,6 +1,6 @@
 <template>
   <p class="typePara">
-    {{ visibleText }} <span v-if="isPointer" class="typeSpan">|</span>
+    {{ visibleText }} <span v-show="isPointer" class="typeSpan">|</span>
   </p>
 </template>
 <script>
@@ -8,7 +8,7 @@ import p5 from "p5";
 
 export default {
   name: "type-writer",
-  props: ["text", "lastChild", "speed"],
+  props: ["text", "lastChild", "writeSpeed"],
   data: function () {
     return {
       visibleText: "",
@@ -18,7 +18,7 @@ export default {
       index: 0,
       timer: -1,
       frame: 0,
-      speed: Number(this.$props.speed),
+      speed: Number(this.$props.writeSpeed),
     };
   },
 

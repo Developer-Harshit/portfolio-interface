@@ -8,14 +8,54 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+html {
+  overflow-x: hidden;
+}
+body,
+html {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0b0d17;
+}
+::-webkit-scrollbar {
+  width: 1vh;
+  background-color: #061828cc;
+}
+::-webkit-scrollbar-track {
+  background: rgba(39, 55, 144, 0.715);
+  background: linear-gradient(
+    74deg,
+    rgba(39, 55, 144, 0.27) 0%,
+    rgba(198, 20, 192, 0.361) 100%
+  );
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a96;
+  border: 1svh solid #f9f9f937;
+  border-radius: 10px;
+  height: 20svh;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1a1ad3;
+  border: 1svh solid #f9f9f99d;
+}
+::-webkit-scrollbar-track:hover {
+  background: rgba(39, 55, 144, 0.848);
+  background: linear-gradient(
+    74deg,
+    rgba(39, 55, 144, 0.745) 0%,
+    rgba(198, 20, 192, 0.77) 100%
+  );
+}
+::-webkit-scrollbar-button {
+  background-color: #050628;
+  border-bottom: 0.5svh solid #f9f9f9bc;
 }
 
 div,
@@ -34,6 +74,7 @@ p {
 }
 header {
   position: sticky;
+  z-index: 100;
   top: 0;
 }
 a {

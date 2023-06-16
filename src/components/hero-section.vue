@@ -8,8 +8,3 @@ export default {
   name: "hero-section",
 };
 </script>
-<style scoped>
-#hero {
-  padding-top: 5rem;
-}
-</style>

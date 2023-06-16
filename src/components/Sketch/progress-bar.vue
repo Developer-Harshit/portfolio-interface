@@ -8,40 +8,19 @@ export default {
     return {
       scrollPercent: 2,
       scrollVal: 2,
+      siteHeight: false,
+      screenHeight: false,
     };
   },
 
   mounted() {
-    // this.setDim();
-    // this.handleScroll();
-
-    // function setDim() {
-    //   var body = document.body,
-    //     html = document.documentElement;
-
-    //   that.siteHeight = Math.max(
-    //     body.scrollHeight,
-    //     body.offsetHeight,
-    //     html.clientHeight,
-    //     html.scrollHeight,
-    //     html.offsetHeight
-    //   );
-
-    //   that.screenHeight = window.outerHeight;
-    //   // your code for handling resize...
-    // }
-    // function handleScroll() {
-    //   that.scrollVal = window.scrollY;
-    //   that.scrollPercent =
-    //     (that.scrollVal / (that.siteHeight - that.screenHeight)) * 100;
-    // }
     class ProgressBar {
       constructor(p5) {
         this.div = p5.select("#progress-bar");
       }
 
       setWidth(wPercent) {
-        this.div.style("width", `${wPercent}%`);
+        this.div.style("width", `${wPercent}svw`);
       }
     }
     var bar;
@@ -58,7 +37,7 @@ export default {
       };
 
       p5.draw = () => {
-        bar.setWidth(that.scrollPercent + 2);
+        bar.setWidth(that.scrollPercent);
       };
     };
 
@@ -82,7 +61,8 @@ export default {
         html.offsetHeight
       );
 
-      this.screenHeight = window.outerHeight;
+      this.screenHeight = html.clientHeight; // window.outerHeight;
+      console.log(this.siteHeight, this.screenHeight);
       // your code for handling resize...
     },
     handleScroll() {
@@ -93,3 +73,19 @@ export default {
   },
 };
 </script>
+<style scoped>
+#progress-bar {
+  width: 0px;
+  height: 2svh;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  background: rgb(39, 55, 144);
+  background: linear-gradient(
+    74deg,
+    rgba(39, 55, 144, 1) 0%,
+    rgba(198, 20, 192, 1) 100%
+  );
+}
+</style>

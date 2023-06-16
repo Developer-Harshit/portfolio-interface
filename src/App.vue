@@ -3,10 +3,10 @@ import HelloWorld from "./components/hello-world.vue";
 import HeroSection from "./components/hero-section.vue";
 
 import AboutDiv from "./components/about-div.vue";
-import NavBar from "./components/nav-bar.vue";
-import ProgressBar from "./components/progress-bar.vue";
+import MainHeader from "./components/Main/main-header.vue";
+import svgPath from "./components/Sketch/svg-path.vue";
 export default {
-  components: { HelloWorld, NavBar, HeroSection, AboutDiv, ProgressBar },
+  components: { HelloWorld, HeroSection, AboutDiv, MainHeader, svgPath },
   data() {
     return {};
   },
@@ -14,35 +14,30 @@ export default {
 </script>
 
 <template>
-  <progress-bar></progress-bar>
-  <header>
-    <nav-bar></nav-bar>
-  </header>
+  <main-header></main-header>
   <main>
     <hero-section>
       <template #hero-slot>
         <about-div></about-div>
       </template>
     </hero-section>
-    <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo m-auto" alt="Vite logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue m-auto" alt="Vue logo" />
-      </a>
-    </div>
-    <hello-world msg="Vite + Vue" />
-    <hello-world msg="Vite + Vue" />
-    <hello-world msg="Vite + Vue" />
-    <hello-world msg="Vite + Vue" />
+    <svg-path></svg-path>
   </main>
+  <hello-world msg="hi"></hello-world>
+  <hello-world msg="hi"></hello-world>
+  <hello-world msg="hi"></hello-world>
+  <hello-world msg="hi"></hello-world>
+  <hello-world msg="hi"></hello-world><hello-world msg="hi"></hello-world>
+
+  <hello-world msg="hi"></hello-world>
   <footer>
-    <hello-world msg="Vite + Vue" />
-    <hello-world msg="Vite + Vue" />
-    <hello-world msg="Vite + Vue" />
-    <hello-world msg="Vite + Vue" />
-    <hello-world msg="Vite + Vue" />
+    <hello-world msg="hi"></hello-world>
+    <hello-world msg="hi"></hello-world>
+    <hello-world msg="hi"></hello-world>
+    <hello-world msg="hi"></hello-world>
+    <hello-world msg="hi"></hello-world>
+    <hello-world msg="hi"></hello-world>
+    <hello-world msg="hi"></hello-world>
   </footer>
 </template>
 <style>

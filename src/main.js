@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import "./styles/base.css";
-import "./styles/essentials.css";
 import "./styles/package/ham.css";
 import App from "./App.vue";
 
