@@ -1,12 +1,12 @@
 <script>
-import HelloWorld from "./components/hello-world.vue";
-import HeroSection from "./components/hero-section.vue";
+import HomePage from "./components/HomePage.vue";
+import MasterHeader from "./components/Master/master-header.vue";
 
-import AboutDiv from "./components/about-div.vue";
-import MainHeader from "./components/Main/main-header.vue";
-import svgPath from "./components/Sketch/svg-path.vue";
 export default {
-  components: { HelloWorld, HeroSection, AboutDiv, MainHeader, svgPath },
+  components: {
+    HomePage,
+    MasterHeader,
+  },
   data() {
     return {};
   },
@@ -14,31 +14,8 @@ export default {
 </script>
 
 <template>
-  <main-header></main-header>
-  <main>
-    <hero-section>
-      <template #hero-slot>
-        <about-div></about-div>
-      </template>
-    </hero-section>
-    <svg-path></svg-path>
-  </main>
-  <hello-world msg="hi"></hello-world>
-  <hello-world msg="hi"></hello-world>
-  <hello-world msg="hi"></hello-world>
-  <hello-world msg="hi"></hello-world>
-  <hello-world msg="hi"></hello-world><hello-world msg="hi"></hello-world>
-
-  <hello-world msg="hi"></hello-world>
-  <footer>
-    <hello-world msg="hi"></hello-world>
-    <hello-world msg="hi"></hello-world>
-    <hello-world msg="hi"></hello-world>
-    <hello-world msg="hi"></hello-world>
-    <hello-world msg="hi"></hello-world>
-    <hello-world msg="hi"></hello-world>
-    <hello-world msg="hi"></hello-world>
-  </footer>
+  <master-header></master-header>
+  <home-page></home-page>
 </template>
 <style>
 .typePara,

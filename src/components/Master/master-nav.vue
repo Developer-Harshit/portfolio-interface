@@ -48,30 +48,24 @@ export default {
 </script>
 
 <style scoped>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 #header-wrapper {
+  @apply flex sticky -z-20 justify-between justify-items-start bg-purple-900;
   background-color: blueviolet;
 
   padding: 2svh;
-  display: flex;
-  justify-items: start;
-  position: sticky;
-  z-index: 5;
   width: 100%;
-
-  justify-content: space-between;
 }
 
 /* backdrop */
+
 aside {
-  text-align: right;
+  @apply text-right absolute z-10 right-0 bg-slate-950;
   text-align: -webkit-right;
+  height: 100vh;
   height: 100svh;
-
-  position: absolute;
-  height: 100svh;
-  right: 0;
-
-  z-index: 2;
   transform: translateX(max(15svw, 50px));
   transition: all ease-in 0.5s;
 }
@@ -82,22 +76,18 @@ nav {
   min-width: 50px;
   width: 15svw;
   height: 100%;
-  background-color: rgb(74, 0, 1274);
   transition: all cubic-bezier(0.73, -0.03, 0.33, 1.1) 0.5s;
 }
 nav ol {
   display: flex;
-  flex-direction: column;
+  @apply flex-col;
 }
 .nav-item {
-  width: 25px;
-  height: 25px;
-  background-color: blueviolet;
+  @apply w-6 h-6 bg-purple-700;
 }
 
 li {
-  align-self: center;
-  margin: 1rem;
+  @apply self-center m-4;
 }
 .logo {
   font-size: 3svh;

@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import typeWriter from "./Sketch/type-writer.vue";
+import typeWriter from "../Sketch/type-writer.vue";
 export default {
   data() {
     return {
