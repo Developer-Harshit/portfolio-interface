@@ -3,9 +3,36 @@
 @tailwind utilities;
 
 :root {
+  --size-small: clamp(0.75rem, 0.4375rem + 1.6667vw, 2rem);
+  --size-med: clamp(1.5625rem, 1.3281rem + 1.25vw, 2.5rem);
+  --size-big: clamp(2.1875rem, 1.9531rem + 1.25vw, 3.125rem);
+
+  --font-base: sans-serif;
+  --font-alpha: Arial;
+  --font-beta: Helvetica;
+  --font-gamma: system-ui;
+
+  --backdrop-one: #140a25a9;
+  --background-base: #140a25;
+  --background-one: #240827;
+  --background-two: #16101e;
+
+  --color-white: #f2edf9;
+
+  --highlight-violet: #6725d1;
+  --highlight-red: #ef4161;
+
+  --highlight-gradient: var(--highlight-violet) 0%, var(--highlight-red) 100%;
+
+  --shadow-filter-white: drop-shadow(0px 0px 15px #ededf28d);
+
+  --shadow-filter-dark: drop-shadow(0px 0px 15px #350f4d98);
+  --border-white: 1px solid #dbcaff34;
+
+  font-weight: 400;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-family: var(--font-gamma), var(--font-base);
 
   color-scheme: light dark;
 
@@ -20,38 +47,30 @@ html {
 }
 body,
 html {
+  font-size: var(--size-small);
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0b0d17;
+  background-color: var(--background-base);
 }
 ::-webkit-scrollbar {
   width: 1vh;
-  background-color: #061828cc;
+  background-color: #0d062856;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(39, 55, 144, 0.715);
-  background: linear-gradient(
-    74deg,
-    rgba(39, 55, 144, 0.27) 0%,
-    rgba(198, 20, 192, 0.361) 100%
-  );
+  background: rgba(76, 39, 144, 0.715);
 }
 ::-webkit-scrollbar-thumb {
   background: #1a1a1a96;
-  border: 1svh solid #f9f9f937;
+  border: 1svh solid #28073ec3;
   border-radius: 10px;
   height: 20svh;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #1a1a1ad3;
-  border: 1svh solid #f9f9f99d;
+  border: 1svh solid #290738bd;
 }
 ::-webkit-scrollbar-track:hover {
   background: rgba(39, 55, 144, 0.848);
-  background: linear-gradient(
-    74deg,
-    rgba(39, 55, 144, 0.745) 0%,
-    rgba(198, 20, 192, 0.77) 100%
-  );
+  background: linear-gradient(74deg, var(--highlight-gradient));
 }
 ::-webkit-scrollbar-button {
   background-color: #050628;
@@ -71,11 +90,6 @@ h6,
 p {
   padding: 0px;
   margin: 0px;
-}
-header {
-  position: sticky;
-  z-index: 100;
-  top: 0;
 }
 a {
   font-weight: 500;
@@ -99,7 +113,7 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;

@@ -1,16 +1,14 @@
 <template>
   <section class="skill-section">
-    <section class="skill-segment">
-      <div v-for="n in 5" class="skill-item" :key="n" :class="returnClasses(n)">
-        <img src="../../assets/js-logo.png" alt="javascript logo" />
-        <p>{{ n }}</p>
-      </div>
-    </section>
+    <svg-path class="skill-segment" n-skills="10"> </svg-path>
   </section>
 </template>
 <script>
+import SvgPath from "../Sketch/svg-path.vue";
+
 export default {
   name: "skill-set",
+  components: { SvgPath },
   methods: {
     returnClasses(n) {
       if (n == 1) {
@@ -24,26 +22,33 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style>
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .skill-section {
-    @apply flex gap-4 flex-col;
-  }
-  .skill-segment {
-    @apply grid gap-5 col-auto;
-  }
-  .skill-item {
-    @apply justify-self-start;
-  }
+.skill-section {
+  @apply flex gap-4 flex-col;
 }
+.skill-segment {
+  @apply grid col-auto;
+  margin: 0.5rem 5svw;
+  gap: 60svh;
+}
+.skill-item {
+  @apply justify-self-start;
+}
+
 .skill-item:nth-child(odd) {
   @apply justify-self-end;
 }
 .skill-item img {
   @apply w-16 h-16 bg-purple-900;
+}
+@media (min-width: 786px) {
+  .skill-segment {
+    margin: 0.5rem 35svw;
+    gap: 60svh;
+  }
 }
 </style>

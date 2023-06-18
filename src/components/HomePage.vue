@@ -43,11 +43,11 @@ export default {
 <style>
 .typePara,
 .typeSpan {
-  font-size: 1rem;
+  font-size: var(--size-small);
 }
 .typeSpan {
   display: inline-block;
-  color: rgba(0, 0, 0, 0.571);
+  color: var(--highlight-red);
   font-weight: 900;
   transform: scaleX(2);
 }

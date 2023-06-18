@@ -1,49 +1,46 @@
 <template>
-  <ol id="header-wrapper">
-    <li id="logo-list">
-      <h1 class="logo">Harshit Shivhare</h1>
-    </li>
-    <li>
-      <div
-        @click="toggleHam"
-        ref="ham"
-        :class="[{ 'is-active': isActive }]"
-        class="hamburger hamburger--emphatic-r"
-      >
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </li>
-  </ol>
-
-  <aside :class="[{ 'is-active': isActive }]" ref="asideNav">
-    <nav>
-      <ol>
-        <li>
-          <div class="nav-item"></div>
-        </li>
-
-        <li>
-          <div class="nav-item"></div>
-        </li>
-      </ol>
-    </nav>
-  </aside>
+  <nav>
+    <ol id="nav-wrapper">
+      <li>
+        <a href="https://www.google.com/">
+          <img src="../../assets/NavIcons/home.svg" alt="Home Icon" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.google.com/">
+          <img src="../../assets/NavIcons/contact.svg" alt="Contact Icon" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.google.com/">
+          <img src="../../assets/NavIcons/plant.svg" alt="Projects Icon" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.google.com/">
+          <img src="../../assets/NavIcons/theme.svg" alt="Theme Icon" />
+        </a>
+      </li>
+    </ol>
+  </nav>
 </template>
 <script>
 export default {
   name: "nav-bar",
+
   data() {
     return {
-      isActive: false,
+      navData: [
+        {
+          name: "Home Icon",
+          link: "../../assets/NavIcons/home.svg",
+          href: "google.com",
+        },
+      ],
+      sourceLink: "../../assets/NavIcons/",
     };
   },
-  methods: {
-    toggleHam() {
-      this.isActive = !this.isActive;
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -51,45 +48,50 @@ export default {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-#header-wrapper {
-  @apply flex sticky -z-20 justify-between justify-items-start bg-purple-900;
-  background-color: blueviolet;
-
-  padding: 2svh;
-  width: 100%;
+* {
+  transition: all cubic-bezier(0.31, -0.27, 0, 1.59) 0.2s;
 }
-
-/* backdrop */
-
-aside {
-  @apply text-right absolute z-10 right-0 bg-slate-950;
-  text-align: -webkit-right;
-  height: 100vh;
-  height: 100svh;
-  transform: translateX(max(15svw, 50px));
-  transition: all ease-in 0.5s;
-}
-.is-active {
-  transform: translateX(0);
+ol {
+  padding: 2svh 0;
+  display: flex;
+  @apply flex-row justify-evenly;
 }
 nav {
-  min-width: 50px;
-  width: 15svw;
-  height: 100%;
-  transition: all cubic-bezier(0.73, -0.03, 0.33, 1.1) 0.5s;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  filter: var(--shadow-filter-dark);
+  background: var(--background-base);
+  border: var(--border-white);
 }
-nav ol {
-  display: flex;
-  @apply flex-col;
+img {
+  height: 4svh;
+  height: max(4svh, 4svw);
+  width: 4svh;
+  width: max(4svh, 4svw);
 }
-.nav-item {
-  @apply w-6 h-6 bg-purple-700;
+li {
+  padding: 0.2rem;
+  margin: 0;
+  border: 1px solid transparent;
+}
+li:hover {
+  border: var(--border-white);
+  background-color: var(--background-base);
+  transform: scale(1.5);
+
+  filter: var(--shadow-filter-dark);
+}
+li:hover img,
+a:active img {
+  filter: invert(99%) sepia(43%) saturate(0%) hue-rotate(252deg)
+    brightness(105%) contrast(102%);
 }
 
-li {
-  @apply self-center m-4;
-}
-.logo {
-  font-size: 3svh;
+img {
+  filter: invert(18%) sepia(93%) saturate(7283%) hue-rotate(260deg)
+    brightness(89%) contrast(96%);
 }
 </style>

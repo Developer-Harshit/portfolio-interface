@@ -18,7 +18,7 @@ export default {
 </script>
 <style scoped>
 #aboutme {
-  margin: 20svh 10svw 30svh 10svw;
+  margin: 10svh 10svw 10svh 10svw;
   max-height: 100svh;
   min-height: 50svh;
   white-space: break-spaces;
