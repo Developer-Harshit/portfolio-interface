@@ -1,7 +1,10 @@
 <template>
-  <section class="skill-section">
-    <svg-path class="skill-segment" n-skills="10"> </svg-path>
-  </section>
+  <div class="skill-section">
+    <ui-h2>My Skills</ui-h2>
+    <svg-path class="skill-seg" n-skills="4">Front-End </svg-path>
+    <svg-path class="skill-seg" n-skills="3"> Back-End </svg-path>
+    <svg-path class="skill-seg" n-skills="2"> Database </svg-path>
+  </div>
 </template>
 <script>
 import SvgPath from "../Sketch/svg-path.vue";
@@ -30,25 +33,9 @@ export default {
 .skill-section {
   @apply flex gap-4 flex-col;
 }
-.skill-segment {
-  @apply grid col-auto;
-  margin: 0.5rem 5svw;
-  gap: 60svh;
-}
-.skill-item {
-  @apply justify-self-start;
-}
-
-.skill-item:nth-child(odd) {
-  @apply justify-self-end;
-}
-.skill-item img {
-  @apply w-16 h-16 bg-purple-900;
-}
-@media (min-width: 786px) {
-  .skill-segment {
-    margin: 0.5rem 35svw;
-    gap: 60svh;
-  }
+.skill-seg {
+  border-top: 1px solid;
+  margin: 2rem;
+  margin-bottom: 5rem;
 }
 </style>

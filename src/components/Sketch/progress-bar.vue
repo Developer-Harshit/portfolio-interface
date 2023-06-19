@@ -90,6 +90,12 @@ export default {
   animation: gradient-move-2a127f37 15s cubic-bezier(0.08, 0.8, 1, 0.72)
     infinite;
 }
+@media (prefers-reduced-motion: reduce) {
+  #progress-bar {
+    animation: none;
+    filter: none;
+  }
+}
 @keyframes gradient-move {
   0%,
   100% {

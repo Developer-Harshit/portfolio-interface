@@ -1,15 +1,20 @@
 <template>
-  <section class="skill-segment" n-skills="10">
-    <div
-      v-for="n in Number(nSkills)"
-      class="skill-item"
-      :key="n"
-      :ref="'myskill' + n"
-      :id="'myskill' + n"
-    >
-      <img src="../../assets/js-logo.png" alt="javascript logo" />
+  <div>
+    <ui-h3>
+      <slot> </slot>
+    </ui-h3>
+    <div class="skill-div">
+      <div
+        v-for="n in Number(nSkills)"
+        class="skill-item"
+        :key="n"
+        :ref="'myskill' + n"
+        :id="'myskill' + n"
+      >
+        <img src="../../assets/js-logo.png" alt="javascript logo" />
+      </div>
     </div>
-  </section>
+  </div>
 </template>
 <script>
 import LeaderLine from "../scripts/leader-line";
@@ -62,14 +67,14 @@ export default {
       const endDiv = this.$refs[`myskill${index}`][0];
       const line = new LeaderLine(startDiv, endDiv, {
         showEffectName: "draw",
-        endPlugColor: " #ef41d2",
-        startPlugColor: "#535bf2",
+        endPlugColor: " #ffffff",
+        startPlugColor: "#ffffff",
         color: "#535bf2",
         endPlug: "disc",
         startPlug: "disc",
         gradient: {
-          endColor: "#ef4161",
-          startColor: "#41128c",
+          startColor: "#535bf2",
+          endColor: "#ef41d2",
         },
         dropShadow: {
           dx: 0,
@@ -82,3 +87,27 @@ export default {
   },
 };
 </script>
+<style scoped>
+.skill-div {
+  @apply grid col-auto;
+  margin: 1rem 15svw;
+  gap: 30svh;
+}
+.skill-item {
+  @apply justify-self-start;
+}
+
+.skill-item:nth-child(even) {
+  @apply justify-self-end;
+}
+.skill-item img {
+  @apply w-16 h-16 bg-purple-900;
+}
+
+@media (min-width: 786px) {
+  .skill-div {
+    margin: 0.5rem 30svw;
+    gap: 30svh;
+  }
+}
+</style>

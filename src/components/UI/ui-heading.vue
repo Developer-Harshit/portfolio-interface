@@ -15,8 +15,7 @@ export default {
 };
 </script>
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap");
 /*
 
 div {
@@ -42,6 +41,7 @@ h1 {
 }
 .container {
   padding: 0.3rem;
+
   margin: auto;
   position: relative;
   z-index: 1;
@@ -58,7 +58,11 @@ h1 {
   animation: gradient-move 10s linear infinite;
   filter: brightness(150%);
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .container {
+    animation: none;
+  }
+}
 @keyframes gradient-move {
   0% {
     --gradient-angle: 0deg;
@@ -85,19 +89,19 @@ h1 {
   padding: 0.3rem;
   min-height: 20svh;
   overflow: hidden;
-
   background-color: #230731ea;
-  font-family: "Nanum Pen Script", cursive;
 }
 h1 {
   font-size: var(--size-big);
   color: #f3e4faad;
   text-align: start;
+  font-family: "Lobster Two", cursive, sans-serif;
 }
 p {
   margin-top: -10px;
   font-size: var(--size-small);
-  color: #c3b9c2c5;
+  color: #9c969ce3;
   display: block;
+  font-weight: 600;
 }
 </style>

@@ -9,13 +9,13 @@ import MasterHeader from "./Master/master-header.vue";
 import SvgPath from "./Sketch/svg-path.vue";
 import AboutDiv from "./Home/about-div.vue";
 import HelloWorld from "./UI/hello-world.vue";
-import HeroSection from "./UI/hero-section.vue";
+import UiSection from "./UI/ui-section.vue";
 import SkillSet from "./Home/skill-set.vue";
 
 export default {
   components: {
     HelloWorld,
-    HeroSection,
+    UiSection,
     AboutDiv,
     MasterHeader,
     SvgPath,
@@ -29,13 +29,17 @@ export default {
 
 <template>
   <main>
-    <hero-section>
+    <ui-section>
       <template #hero-slot>
         <about-div></about-div>
       </template>
-    </hero-section>
+    </ui-section>
     <!-- <svg-path></svg-path> -->
-    <skill-set></skill-set>
+    <ui-section>
+      <template #hero-slot>
+        <skill-set></skill-set>
+      </template>
+    </ui-section>
   </main>
 
   <footer></footer>
