@@ -1,7 +1,7 @@
 <template>
-  <p class="typePara">
+  <span class="typePara">
     {{ visibleText }} <span v-show="isPointer" class="typeSpan">|</span>
-  </p>
+  </span>
 </template>
 <script>
 import p5 from "p5";
@@ -64,3 +64,14 @@ export default {
   },
 };
 </script>
+<style>
+.typePara,
+.typeSpan {
+}
+.typeSpan {
+  display: inline-block;
+  color: var(--highlight-violet);
+  font-weight: 900;
+  transform: scaleX(2);
+}
+</style>

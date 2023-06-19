@@ -21,24 +21,28 @@ export default {
       svgLines: [],
     };
   },
+
   mounted() {
-    const that = this;
-    //Loop through 1 to nSkills-1
-    for (let i = 2; i <= this.nSkills; i++) {
-      //create line start : i -1 end: i
-      const myLine = this.createNewLine(i);
-      //create observer
-      const myObserver = this.createNewObserver(myLine);
-      //observe end point
-      myObserver.observe(this.$refs[`myskill${i}`][0]);
-      //store it
-      this.svgLines.push({
-        obs: myObserver,
-        line: myLine,
-      });
-    }
+    this.createPath();
   },
   methods: {
+    createPath() {
+      this.svgLines = [];
+      //Loop through 1 to nSkills-1
+      for (let i = 2; i <= this.nSkills; i++) {
+        //create line start : i -1 end: i
+        const myLine = this.createNewLine(i);
+        //create observer
+        const myObserver = this.createNewObserver(myLine);
+        //observe end point
+        myObserver.observe(this.$refs[`myskill${i}`][0]);
+        //store it
+        this.svgLines.push({
+          obs: myObserver,
+          line: myLine,
+        });
+      }
+    },
     createNewObserver(line) {
       const handler = function (enteries) {
         enteries.forEach(function (entry) {

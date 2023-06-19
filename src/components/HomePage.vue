@@ -40,15 +40,3 @@ export default {
 
   <footer></footer>
 </template>
-<style>
-.typePara,
-.typeSpan {
-  font-size: var(--size-small);
-}
-.typeSpan {
-  display: inline-block;
-  color: var(--highlight-red);
-  font-weight: 900;
-  transform: scaleX(2);
-}
-</style>
