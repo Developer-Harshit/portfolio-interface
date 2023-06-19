@@ -62,7 +62,7 @@ export default {
       const endDiv = this.$refs[`myskill${index}`][0];
       const line = new LeaderLine(startDiv, endDiv, {
         showEffectName: "draw",
-        endPlugColor: "#535bf2",
+        endPlugColor: " #ef41d2",
         startPlugColor: "#535bf2",
         color: "#535bf2",
         endPlug: "disc",
