@@ -1,6 +1,9 @@
 <template>
   <header>
-    <ui-heading>Harshit Shivhare</ui-heading>
+    <ui-heading
+      >Harshit Shivhare
+      <template #desc>Full-Stack Developer</template></ui-heading
+    >
     <progress-bar></progress-bar>
     <master-nav></master-nav>
   </header>

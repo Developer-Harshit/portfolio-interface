@@ -62,7 +62,7 @@ nav {
   z-index: 5;
   left: 0;
   bottom: 0;
-  filter: var(--shadow-filter-dark);
+  filter: var(--filter-shadow-dark);
   background: var(--background-base);
   border: var(--border-white);
 }
@@ -82,7 +82,7 @@ li:hover {
   background-color: var(--background-base);
   transform: scale(1.5);
 
-  filter: var(--shadow-filter-dark);
+  filter: var(--filter-shadow-white);
 }
 li:hover img,
 a:active img {

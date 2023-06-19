@@ -5,7 +5,7 @@
 :root {
   --size-small: clamp(0.75rem, 0.4375rem + 1.6667vw, 2rem);
   --size-med: clamp(1.5625rem, 1.3281rem + 1.25vw, 2.5rem);
-  --size-big: clamp(2.1875rem, 1.9531rem + 1.25vw, 3.125rem);
+  --size-big: clamp(2.2875rem, 2.3531rem + 1.65vw, 4.125rem);
 
   --font-base: sans-serif;
   --font-alpha: Arial;
@@ -24,9 +24,11 @@
 
   --highlight-gradient: var(--highlight-violet) 0%, var(--highlight-red) 100%;
 
-  --shadow-filter-white: drop-shadow(0px 0px 15px #ededf28d);
+  --filter-shadow-white: drop-shadow(0px 0px 10px #cab3fbea);
 
-  --shadow-filter-dark: drop-shadow(0px 0px 15px #350f4d98);
+  --filter-blur: blur(10px);
+
+  --filter-shadow-dark: drop-shadow(0px 0px 15px #24043dc8);
   --border-white: 1px solid #dbcaff34;
 
   font-weight: 400;

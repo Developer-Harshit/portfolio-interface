@@ -62,7 +62,6 @@ export default {
       );
 
       this.screenHeight = html.clientHeight; // window.outerHeight;
-      console.log(this.siteHeight, this.screenHeight);
       // your code for handling resize...
     },
     handleScroll() {
@@ -81,7 +80,9 @@ export default {
   z-index: 5;
   left: 0;
   top: 0;
-  filter: var(--shadow-filter-white);
+  filter: var(--filter-shadow-white);
+  border: 1px solid rgba(255, 255, 255, 0.502);
+  border-left: 10px solid rgba(255, 255, 255, 0.849);
   background-color: rgb(74, 18, 139);
   background: linear-gradient(250deg, var(--highlight-gradient));
 
