@@ -4,19 +4,19 @@
       >Harshit Shivhare
       <template #desc>Full-Stack Developer</template></ui-heading
     >
-    <progress-bar></progress-bar>
+    <ui-progress-bar></ui-progress-bar>
     <master-nav></master-nav>
   </header>
 </template>
 <script>
-import MasterNav from "./master-nav.vue";
-import ProgressBar from "../Sketch/progress-bar.vue";
-import UiHeading from "../UI/ui-heading.vue";
+import MasterNav from "./MasterNav.vue";
+import UiProgressBar from "../UI/UiProgressBar.vue";
+import UiHeading from "../UI/UiH1.vue";
 export default {
-  name: "main-header",
+  name: "master-header",
   components: {
     MasterNav,
-    ProgressBar,
+    UiProgressBar,
     UiHeading,
   },
 };

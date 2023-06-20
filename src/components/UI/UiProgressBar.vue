@@ -73,36 +73,10 @@ export default {
 };
 </script>
 <style scoped>
-#progress-bar {
-  height: 2svh;
-  width: 0px;
-  position: fixed;
-  z-index: 5;
-  left: 0;
-  top: 0;
-  filter: var(--filter-shadow-white);
-  border: 1px solid rgba(255, 255, 255, 0.502);
-  border-left: 10px solid rgba(255, 255, 255, 0.849);
-  background-color: rgb(74, 18, 139);
-  background: linear-gradient(250deg, var(--highlight-gradient));
-
-  background-size: 400% 100%;
-  animation: gradient-move-2a127f37 15s cubic-bezier(0.08, 0.8, 1, 0.72)
-    infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-  #progress-bar {
-    animation: none;
-    filter: none;
-  }
-}
 @keyframes gradient-move {
   0%,
   100% {
     background-position: 0% 50%;
-  }
-  25%,
-  75% {
   }
   50% {
     background-position: 100% 50%;
@@ -115,6 +89,33 @@ export default {
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+#progress-bar {
+  height: 1.7svh;
+  width: 0px;
+
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.502);
+  border-left: 1svw solid rgba(255, 255, 255, 0.849);
+
+  background-color: rgb(74, 18, 139);
+
+  background: linear-gradient(270deg, var(--highlight-gradient));
+  animation: gradient-move 15s cubic-bezier(0.08, 0.8, 1, 0.72) infinite;
+
+  background-size: 400% 100%;
+
+  filter: brightness(130%);
+}
+@media (prefers-reduced-motion: reduce) {
+  #progress-bar {
+    animation-duration: 30s;
+    filter: none;
   }
 }
 </style>

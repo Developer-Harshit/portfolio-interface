@@ -1,17 +1,17 @@
 <template>
   <div class="skill-section">
     <ui-h2>My Skills</ui-h2>
-    <svg-path class="skill-seg" n-skills="4">Front-End </svg-path>
-    <svg-path class="skill-seg" n-skills="3"> Back-End </svg-path>
-    <svg-path class="skill-seg" n-skills="2"> Database </svg-path>
+    <skill-div class="skill-seg" n-skills="4">Front-End </skill-div>
+    <skill-div class="skill-seg" n-skills="3"> Back-End </skill-div>
+    <skill-div class="skill-seg" n-skills="2"> Database </skill-div>
   </div>
 </template>
 <script>
-import SvgPath from "../Sketch/svg-path.vue";
+import SkillDiv from "../Home/SkillDiv.vue";
 
 export default {
   name: "skill-set",
-  components: { SvgPath },
+  components: { SkillDiv },
   methods: {
     returnClasses(n) {
       if (n == 1) {

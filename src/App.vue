@@ -1,6 +1,6 @@
 <script>
 import HomePage from "./components/HomePage.vue";
-import MasterHeader from "./components/Master/master-header.vue";
+import MasterHeader from "./components/Master/MasterHeader.vue";
 export default {
   components: {
     HomePage,

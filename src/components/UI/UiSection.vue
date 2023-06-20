@@ -1,6 +1,6 @@
 <template>
-  <section id="hero">
-    <slot name="hero-slot"></slot>
+  <section>
+    <slot></slot>
   </section>
 </template>
 <script>

@@ -18,10 +18,11 @@
 
   --color-white: #f2edf9;
 
-  --highlight-violet: #6725d1;
-  --highlight-red: #ef41d2;
+  --highlight-violet: #6d2de4;
+  --highlight-red: #ef386f;
+  --highlight-blue: #336ce8;
 
-  --highlight-gradient: var(--highlight-violet) 0%, var(--highlight-red) 100%;
+  --highlight-gradient: #6e13dd, #ca2f72, var(--highlight-blue);
 
   --filter-shadow-white: drop-shadow(0px 0px 10px #cab3fbea);
 
