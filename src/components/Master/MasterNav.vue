@@ -20,16 +20,18 @@ export default {
           svg: "svg-home",
           href: "google.com",
         },
+
         {
-          svg: "svg-contact",
+          svg: "svg-project",
           href: "google.com",
         },
+        {
+          svg: "svg-contact",
+          href: "#contact-me",
+        },
+
         {
           svg: "svg-theme",
-          href: "google.com",
-        },
-        {
-          svg: "svg-contact",
           href: "google.com",
         },
       ],

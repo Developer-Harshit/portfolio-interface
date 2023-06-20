@@ -14,6 +14,10 @@ export default {
 
 <template>
   <master-header></master-header>
+
   <home-page></home-page>
+  <footer>
+    <div id="contact-me">hi</div>
+  </footer>
 </template>
 <style src="./styles/base.css"></style>

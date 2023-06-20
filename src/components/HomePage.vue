@@ -25,6 +25,4 @@ export default {
       <skill-section></skill-section>
     </ui-section>
   </main>
-
-  <footer></footer>
 </template>

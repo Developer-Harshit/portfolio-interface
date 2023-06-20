@@ -52,6 +52,7 @@ a:active .mySvg {
   filter: invert(84%) sepia(16%) saturate(351%) hue-rotate(208deg)
     brightness(111%) contrast(95%);
 }
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition-duration: 1s;
