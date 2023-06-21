@@ -1,6 +1,7 @@
 <template>
   <span class="typePara">
-    {{ visibleText }} <span v-show="isPointer" class="typeSpan">|</span>
+    {{ visibleText }}
+    <span class="typeSpan show" ref="typeSpan">|</span>
   </span>
 </template>
 <script>
@@ -21,9 +22,15 @@ export default {
       speed: Number(this.$props.writeSpeed),
     };
   },
-
+  watch: {
+    isPointer() {
+      const pointer = this.$refs.typeSpan;
+      pointer.classList.toggle("show");
+    },
+  },
   methods: {
-    togglePointer(speed = 15) {
+    togglePointer(speed = 20) {
+      if (!this.isFinished) return;
       if (this.frame % speed == 0) this.isPointer = !this.isPointer;
     },
     writeText(word) {
@@ -65,13 +72,14 @@ export default {
 };
 </script>
 <style>
-.typePara,
-.typeSpan {
-}
 .typeSpan {
   display: inline-block;
   color: var(--highlight-violet);
   font-weight: 900;
   transform: scaleX(2);
+  opacity: 0;
+}
+.show {
+  opacity: 1;
 }
 </style>

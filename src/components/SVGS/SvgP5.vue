@@ -8,6 +8,7 @@
     y="0px"
     viewBox="0 0 512 512"
     xml:space="preserve"
+    fill="#ec245e"
   >
     <g>
       <path

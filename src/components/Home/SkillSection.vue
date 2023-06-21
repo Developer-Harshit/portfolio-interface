@@ -1,9 +1,7 @@
 <template>
   <div class="skill-section">
     <ui-h2>My Skills</ui-h2>
-    <skill-div class="skill-seg" n-skills="4">Front-End </skill-div>
-    <skill-div class="skill-seg" n-skills="3"> Back-End </skill-div>
-    <skill-div class="skill-seg" n-skills="2"> Database </skill-div>
+    <skill-div class="skill-seg" n-skills="3" :skill-comp="skills"> </skill-div>
   </div>
 </template>
 <script>
@@ -12,6 +10,25 @@ import SkillDiv from "../Home/SkillDiv.vue";
 export default {
   name: "skill-set",
   components: { SkillDiv },
+  data() {
+    return {
+      skills: [
+        { heading: "Front-End" },
+        { icon: "svg-html", tip: "Html" },
+        { icon: "svg-css", tip: "CSS" },
+        { icon: "svg-js", tip: "Javascript" },
+        { icon: "svg-p5", tip: "P5-Js" },
+        { icon: "svg-vue", tip: "Vue-Js" },
+        { heading: "Back-End" },
+        { icon: "svg-node", tip: "Node-Js" },
+        { icon: "svg-express", tip: "Express-Js" },
+
+        { heading: "Database" },
+        { icon: "svg-sql", tip: "MySql" },
+        { icon: "svg-mongo", tip: "MongoDB" },
+      ],
+    };
+  },
   methods: {
     returnClasses(n) {
       if (n == 1) {
@@ -34,8 +51,6 @@ export default {
   @apply flex gap-4 flex-col;
 }
 .skill-seg {
-  border-top: 1px solid;
-  margin: 2rem;
   margin-bottom: 5rem;
 }
 </style>

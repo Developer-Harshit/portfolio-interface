@@ -1,8 +1,8 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#e34c26">
     <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
     <path
-      d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"
+      d="M 0 32 l 34.9 395.8 L 191.5 480 l 157.6 -52.2 L 384 32 H 0 z m 308.2 127.9 H 124.4 l 4.1 49.4 h 175.6 l -13.6 148.4 l -97.9 27 v 0.3 h -1.1 l -98.7 -27.3 l -6 -75.8 h 47.7 L 138 320 l 53.5 14.5 l 53.7 -14.5 l 6 -62.2 H 84.3 L 71.5 112.2 h 241.1 l -4.4 47.7 z"
     />
   </svg>
 </template>

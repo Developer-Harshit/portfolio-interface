@@ -5,22 +5,22 @@
     aria-hidden="true"
     role="img"
     class="iconify iconify--logos"
-    width="37.07"
+    width="37.1"
     height="36"
     preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 256 198"
   >
     <path
-      fill="#41B883"
-      d="M204.8 0H256L128 220.8L0 0h97.92L128 51.2L157.44 0h47.36Z"
+      fill="#41b883"
+      d="M 204.8 0 H 256 L 128 220.8 L 0 0 h 97.9 L 128 51.2 L 157.4 0 h 47.4 Z"
     ></path>
     <path
-      fill="#41B883"
-      d="m0 0l128 220.8L256 0h-51.2L128 132.48L50.56 0H0Z"
+      fill="#41b883"
+      d="M 0 0 l 128 220.8 L 256 0 h -51.2 L 128 132.5 L 50.6 0 H 0 Z"
     ></path>
     <path
-      fill="#35495E"
-      d="M50.56 0L128 133.12L204.8 0h-47.36L128 51.2L97.92 0H50.56Z"
+      fill="#35495e"
+      d="M 50.6 0 L 128 133.1 L 204.8 0 h -47.4 L 128 51.2 L 97.9 0 H 50.6 Z"
     ></path>
   </svg>
 </template>
@@ -29,3 +29,4 @@ export default {
   name: "svg-vue",
 };
 </script>
+<style scoped></style>

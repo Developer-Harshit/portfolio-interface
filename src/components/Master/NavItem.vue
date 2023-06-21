@@ -29,9 +29,9 @@ export default {
 }
 .mySvg {
   height: 4svh;
-  height: max(4svh, 4svw);
+  height: min(4svh, 4svw);
   width: 4svh;
-  width: max(4svh, 4svw);
+  width: min(4svh, 4svw);
   filter: invert(18%) sepia(93%) saturate(7283%) hue-rotate(260deg)
     brightness(89%) contrast(96%);
 }

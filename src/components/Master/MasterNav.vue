@@ -45,9 +45,7 @@ export default {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-  transition: all cubic-bezier(0.31, -0.27, 0, 1.59) 0.5s;
-}
+
 ol {
   padding: 2svh 0;
   display: flex;

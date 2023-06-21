@@ -4,7 +4,8 @@
 
 :root {
   --size-small: clamp(0.75rem, 0.4375rem + 1.6667vw, 2rem);
-  --size-med: clamp(1.5625rem, 1.3281rem + 1.25vw, 2.5rem);
+  --size-med2: clamp(0.9125rem, 0.6281rem + 1.5vw, 2.1rem);
+  --size-med: clamp(1.3625rem, 1.3281rem + 1.25vw, 2.5rem);
   --size-big: clamp(2.2875rem, 2.3531rem + 1.65vw, 4.125rem);
 
   --font-base: sans-serif;
@@ -18,7 +19,7 @@
 
   --color-white: #f2edf9;
 
-  --highlight-violet: #6d2de4;
+  --highlight-violet: #9054fe;
   --highlight-red: #ef386f;
   --highlight-blue: #336ce8;
 
@@ -44,7 +45,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-html {
+* {
   overflow-x: hidden;
 }
 body,

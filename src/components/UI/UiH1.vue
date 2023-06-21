@@ -87,7 +87,6 @@ h1 {
 
 .gradient {
   padding: 0.3rem;
-  min-height: 20svh;
   overflow: hidden;
   background-color: #230731ea;
 }
@@ -96,12 +95,18 @@ h1 {
   color: #f3e4faad;
   text-align: start;
   font-family: "Lobster Two", cursive, sans-serif;
+  line-height: 1.1;
 }
 p {
-  margin-top: -10px;
+  margin-top: -2px;
   font-size: var(--size-small);
   color: #9c969ce3;
   display: block;
   font-weight: 600;
+}
+@media (max-width: 300px) {
+  h1 {
+    font-size: var(--size-med2);
+  }
 }
 </style>
