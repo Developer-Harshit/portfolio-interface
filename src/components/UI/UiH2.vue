@@ -1,10 +1,14 @@
 <template>
   <h2>
     <slot></slot>
-    <a href="" class="hash"> # </a>
+    <a :href="textlink" class="hash"> # </a>
   </h2>
 </template>
-
+<script>
+export default {
+  props: ["textlink"],
+};
+</script>
 <style scoped>
 h2 {
   padding: 0.7rem 0;
@@ -18,10 +22,11 @@ h2 {
 }
 h2:hover .hash,
 .hash:hover {
+  color: var(--color-white);
   opacity: 1;
 }
 .hash {
-  color: var(--highlight-blue);
+  text-shadow: 2px 2px 1px var(--highlight-violet);
   opacity: 0;
 }
 </style>

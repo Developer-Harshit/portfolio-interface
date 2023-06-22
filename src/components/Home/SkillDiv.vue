@@ -13,7 +13,9 @@
         :is="comp.icon"
         class="skill-svg"
       ></component>
-      <h3 v-else class="skill-h3">{{ comp.heading }}</h3>
+      <a v-else :href="'#myskill' + n">
+        <h3 class="skill-h3">{{ comp.heading }}</h3>
+      </a>
     </div>
   </div>
 </template>

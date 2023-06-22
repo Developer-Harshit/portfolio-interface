@@ -45,9 +45,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-* {
-  overflow-x: hidden;
-}
+
 body,
 html {
   font-size: var(--size-small);
@@ -96,7 +94,10 @@ p {
   padding: 0px;
   margin: 0px;
 }
-
+footer {
+  padding-bottom: 25svh;
+  padding-bottom: max(25svh, 5svw + 20svh);
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

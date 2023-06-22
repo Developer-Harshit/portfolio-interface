@@ -1,6 +1,6 @@
 <template>
-  <div class="skill-section">
-    <ui-h2>My Skills</ui-h2>
+  <div id="skill-wrapper">
+    <ui-h2 textlink="#skill-wrapper">My Skills</ui-h2>
     <skill-div class="skill-seg" n-skills="3" :skill-comp="skills"> </skill-div>
   </div>
 </template>
@@ -47,7 +47,7 @@ export default {
 @tailwind components;
 @tailwind utilities;
 
-.skill-section {
+#skill-wrapper {
   @apply flex gap-4 flex-col;
 }
 .skill-seg {

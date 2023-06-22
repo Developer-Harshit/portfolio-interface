@@ -1,6 +1,6 @@
 <template>
   <div id="aboutme">
-    <ui-h2>About Me</ui-h2>
+    <ui-h2 textlink="#aboutme">About Me</ui-h2>
     <ui-h3>
       <typeWriter
         :text="title"
